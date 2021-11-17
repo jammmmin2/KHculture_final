@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>강좌 검색</title>
+    <link
+      rel="stylesheet"
+      href="../../static/css/lectureList/lectureList.css"
+    />
+    <link rel="stylesheet" href="../../static/css/lectureList/lectureSearchStyle.css">
+   
+    <script
+      src="https://kit.fontawesome.com/1be9c91961.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- noto sans 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="lecturelist lectureSearchBody">
+    <div class="titleArea">
+      <h1>강좌검색</h1>
+    </div>
+    <div class="listSearchContainer">
+      <div class="searchContainer">
+        <div class="categorySearch">
+          <p>강좌 분류</p>
+          <div class="sel sel--black-panther selectDiv">
+            <select name="select-profession" id="select-profession">
+                <option value="" disabled>강좌 분류</option>
+              <option value="전체">전체</option>
+              <option value="정기강좌">정기강좌</option>
+              <option value="단기강좌">단기강좌</option>
+              <option value="무료강좌">무료강좌</option>
+            </select>
+          </div>
+        </div>
+        <div class="targetSearch">
+          <p>강좌 대상</p>
+          <div class="sel sel--black-panther selectDiv">
+            <select name="select-profession" id="select-profession">
+                <option value="" disabled>강좌 대상</option>
+              <option value="전체">전체</option>
+              <option value="성인강좌">성인강좌</option>
+              <option value="아동강좌">아동강좌</option>
+              <option value="영유아강좌">영유아강좌</option>
+            </select>
+          </div>
+        </div>
+        <div class="registStatus">
+          <p>접수 상태</p>
+          <div class="sel sel--black-panther selectDiv">
+            <select name="select-profession" id="select-profession">
+                <option value="" disabled>접수 상태</option>
+              <option value="전체">전체</option>
+              <option value="접수 예정">접수 예정</option>
+              <option value="접수 중">접수 중</option>
+              <option value="접수 마감">접수 마감</option>
+            </select>
+          </div>
+        </div>
+        <div class="yearSearch">
+          <p>개강 년도</p>
+          <div class="sel sel--black-panther selectDiv">
+            <select name="select-profession" id="select-profession">
+                <option value="" disabled>개강 년도</option>
+              <option value="전체">전체</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+              <option value="2019">2019</option>
+              <option value="2018">2018</option>
+              <option value="2017">2017</option>
+            </select>
+          </div>
+        </div>
+        <div class="monthSearch">
+          <p>개강 월</p>
+          <div class="sel sel--black-panther selectDiv">
+            <select name="select-profession" id="searchMonth">
+                <option value="" disabled>개강 월</option>
+              <option value="">전체</option>
+              <option value="1">1월</option>
+              <option value="2">2월</option>
+              <option value="3">3월</option>
+              <option value="4">4월</option>
+              <option value="5">5월</option>
+              <option value="6">6월</option>
+              <option value="7">7월</option>
+              <option value="8">8월</option>
+              <option value="9">9월</option>
+              <option value="10">10월</option>
+              <option value="11">11월</option>
+              <option value="12">12월</option>
+            </select>
+          </div>
+        </div>
+        <div class="daySearch">
+          <p>개강 요일</p>
+          <div class="sel sel--black-panther selectDiv">
+            <select name="select-profession" id="searchDay" placeholder="개강 시간">
+                <option value="" disabled>개강 요일</option>
+                <option value="전체">전체</option>
+                <option value="월요일">월요일</option>
+                <option value="화요일">화요일</option>
+                <option value="수요일">수요일</option>
+                <option value="목요일">목요일</option>
+                <option value="금요일">금요일</option>
+                <option value="토요일">토요일</option>
+                <option value="일요일">일요일</option>
+            </select>
+          </div>
+        </div>
+        <div class="timeSearch">
+          <p>개강 시간</p>
+          <div class="sel sel--black-panther selectDiv">
+            <select name="select-profession" id="select-profession" placeholder="전체">
+                <option value="" disabled>개강 시간</option>
+                <option value="">전체</option>
+                <option value="09~10">9~10(시)</option>
+                <option value="10~11">10~11(시)</option>
+                <option value="11~12">11~12(시)</option>
+                <option value="12~13">12~13(시)</option>
+                <option value="13~14">13~14(시)</option>
+                <option value="14~15">14~15(시)</option>
+                <option value="15~16">15~16(시)</option>
+                <option value="16~17">16~17(시)</option>
+                <option value="17~18">17~18(시)</option>
+                <option value="18~19">18~19(시)</option>
+                <option value="19~20">19~20(시)</option>
+                <option value="20~21">20~21(시)</option>
+            </select>
+          </div>
+        </div>
+        <div class="typingSearch">
+          <a><i class="far fa-calendar-alt"></i> 전체 조회 하기</a>
+          <div>
+            <input type="text" name="" id="" placeholder="강좌명/강사명을 입력하세요.">
+            <button type="button" id="searchBtn"><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="listDiv">
+        <div class="alignDiv">
+          <div class="alignStandard">
+            <a id="deadline" href="#" class="line" data-click="deadline">마감 임박순</a>
+             | 
+             <a id="lowPrice" href="#" data-click="lowPrice">낮은 가격순</a>
+             |
+             <a id="highPrice" href="#" data-click="highPrice">높은 가격순</a>
+          </div>
+          <div class="listCount">
+            <p>조회 강좌 총 <span>50</span>건</p>
+          </div>
+        </div>
+        <div class="lectureDiv">
+          <div class="lectureDesc">
+            <div class="lectureImg">
+              <img
+                src="../../static/images/lectureList/20181129114054.jpg"
+                alt=""
+              />
+            </div>
+            <div class="lectureInfo">
+              <div>
+                <p class="adult">성인강좌</p>
+                <p class="regular">정기강좌</p>
+              </div>
+              <div class="lectureContent">
+                <h3>10/25 실내 인테리어 플라원 데코 인테리어 플라원 데코</h3>
+                <p>김선우 | (월) 14:00 ~ 15:20</p>
+                <p>5,000원(총1회)</p>
+              </div>
+              
+            </div>
+            <div class="btnDiv">
+              <div class="cart">
+                <i class="fas fa-shopping-bag"></i>
+                <p>장바구니</p>
+              </div>
+              <div class="applyPossible">
+                <i class="far fa-check-circle"></i>
+                <p>접수 중</p>
+              </div>
+          </div>
+          </div>
+          <div class="lectureDesc">
+            <div class="lectureImg">
+              <img
+                src="../../static/images/lectureList/20181129114054.jpg"
+                alt=""
+              />
+            </div>
+            <div class="lectureInfo">
+              <div>
+                <p class="adult">성인강좌</p>
+                <p class="regular">정기강좌</p>
+              </div>
+              <div class="lectureContent">
+                <h3>10/30 실내 인테리어 플라원 데코 인테리어 플라원 데코</h3>
+                <p>김선우 | (월) 14:00 ~ 15:20</p>
+                <p>5,000원(총1회)</p>
+              </div>
+              
+            </div>
+            <div class="btnDiv">
+              <div class="cart">
+                <i class="fas fa-shopping-bag"></i>
+                <p>장바구니</p>
+              </div>
+              <div class="applyInpossible">
+                <i class="far fa-times-circle"></i>
+                <p>접수 마감</p>
+              </div>
+          </div>
+          </div>
+          <div class="lectureDesc">
+            <div class="lectureImg">
+              <img
+                src="../../static/images/lectureList/20181129114054.jpg"
+                alt=""
+              />
+            </div>
+            <div class="lectureInfo">
+              <div>
+                <p class="adult">성인강좌</p>
+                <p class="regular">정기강좌</p>
+              </div>
+              <div class="lectureContent">
+                <h3>10/10 실내 인테리어 플라원 데코 인테리어 플라원 데코</h3>
+                <p>김선우 | (월) 14:00 ~ 15:20</p>
+                <p>5,000원(총1회)</p>
+              </div>
+              
+            </div>
+            <div class="btnDiv">
+              <div class="cart">
+                <i class="fas fa-shopping-bag"></i>
+                <p>장바구니</p>
+              </div>
+              <div class="applyPlan">
+                <i class="far fa-calendar-alt"></i>
+                <p>접수 예정</p>
+              </div>
+          </div>
+          </div>
+          <div class="lectureDesc">
+            <div class="lectureImg">
+              <img
+                src="../../static/images/lectureList/20181129114054.jpg"
+                alt=""
+              />
+            </div>
+            <div class="lectureInfo">
+              <div>
+                <p class="adult">성인강좌</p>
+                <p class="regular">정기강좌</p>
+              </div>
+              <div class="lectureContent">
+                <h3>10/25 실내 인테리어 플라원 데코 인테리어 플라원 데코</h3>
+                <p>김선우 | (월) 14:00 ~ 15:20</p>
+                <p>5,000원(총1회)</p>
+              </div>
+              
+            </div>
+            <div class="btnDiv">
+              <div class="cart">
+                <i class="fas fa-shopping-bag"></i>
+                <p>장바구니</p>
+              </div>
+              <div class="applyPossible">
+                <i class="far fa-calendar-alt"></i>
+                <p>접수 예정</p>
+              </div>
+          </div>
+          </div>
+          <div class="lectureDesc">
+            <div class="lectureImg">
+              <img
+                src="../../static/images/lectureList/20181129114054.jpg"
+                alt=""
+              />
+            </div>
+            <div class="lectureInfo">
+              <div>
+                <p class="adult">성인강좌</p>
+                <p class="regular">정기강좌</p>
+              </div>
+              <div class="lectureContent">
+                <h3>10/25 실내 인테리어 플라원 데코 인테리어 플라원 데코</h3>
+                <p>김선우 | (월) 14:00 ~ 15:20</p>
+                <p>5,000원(총1회)</p>
+              </div>
+              
+            </div>
+            <div class="btnDiv">
+              <div class="cart">
+                <i class="fas fa-shopping-bag"></i>
+                <p>장바구니</p>
+              </div>
+              <div class="applyPossible">
+                <i class="far fa-calendar-alt"></i>
+                <p>접수 예정</p>
+              </div>
+          </div>
+          </div>
+          <div class="lectureDesc">
+            <div class="lectureImg">
+              <img
+                src="../../static/images/lectureList/20181129114054.jpg"
+                alt=""
+              />
+            </div>
+            <div class="lectureInfo">
+              <div>
+                <p class="adult">성인강좌</p>
+                <p class="regular">정기강좌</p>
+              </div>
+              <div class="lectureContent">
+                <h3>10/25 실내 인테리어 플라원 데코 인테리어 플라원 데코</h3>
+                <p>김선우 | (월) 14:00 ~ 15:20</p>
+                <p>5,000원(총1회)</p>
+              </div>
+              
+            </div>
+            <div class="btnDiv">
+              <div class="cart">
+                <i class="fas fa-shopping-bag"></i>
+                <p>장바구니</p>
+              </div>
+              <div class="applyPossible">
+                <i class="far fa-calendar-alt"></i>
+                <p>접수 예정</p>
+              </div>
+          </div>
+          </div>
+          <div class="lectureDesc">
+            <div class="lectureImg">
+              <img
+                src="../../static/images/lectureList/20181129114054.jpg"
+                alt=""
+              />
+            </div>
+            <div class="lectureInfo">
+              <div>
+                <p class="adult">성인강좌</p>
+                <p class="regular">정기강좌</p>
+              </div>
+              <div class="lectureContent">
+                <h3>10/25 실내 인테리어 플라원 데코 인테리어 플라원 데코</h3>
+                <p>김선우 | (월) 14:00 ~ 15:20</p>
+                <p>5,000원(총1회)</p>
+              </div>
+              
+            </div>
+            <div class="btnDiv">
+              <div class="cart">
+                <i class="fas fa-shopping-bag"></i>
+                <p>장바구니</p>
+              </div>
+              <div class="applyPossible">
+                <i class="far fa-calendar-alt"></i>
+                <p>접수 예정</p>
+              </div>
+          </div>
+          </div>
+          <div class="lectureDesc">
+            <div class="lectureImg">
+              <img
+                src="../../static/images/lectureList/20181129114054.jpg"
+                alt=""
+              />
+            </div>
+            <div class="lectureInfo">
+              <div>
+                <p class="adult">성인강좌</p>
+                <p class="regular">정기강좌</p>
+              </div>
+              <div class="lectureContent">
+                <h3>10/25 실내 인테리어 플라원 데코 인테리어 플라원 데코</h3>
+                <p>김선우 | (월) 14:00 ~ 15:20</p>
+                <p>5,000원(총1회)</p>
+              </div>
+              
+            </div>
+            <div class="btnDiv">
+              <div class="cart">
+                <i class="fas fa-shopping-bag"></i>
+                <p>장바구니</p>
+              </div>
+              <div class="applyPossible">
+                <i class="far fa-calendar-alt"></i>
+                <p>접수 예정</p>
+              </div>
+          </div>
+          </div>
+          <div class="lectureDesc">
+            <div class="lectureImg">
+              <img
+                src="../../static/images/lectureList/20181129114054.jpg"
+                alt=""
+              />
+            </div>
+            <div class="lectureInfo">
+              <div>
+                <p class="adult">성인강좌</p>
+                <p class="regular">정기강좌</p>
+              </div>
+              <div class="lectureContent">
+                <h3>10/25 실내 인테리어 플라원 데코 인테리어 플라원 데코</h3>
+                <p>김선우 | (월) 14:00 ~ 15:20</p>
+                <p>5,000원(총1회)</p>
+              </div>
+              
+            </div>
+            <div class="btnDiv">
+              <div class="cart">
+                <i class="fas fa-shopping-bag"></i>
+                <p>장바구니</p>
+              </div>
+              <div class="applyPossible">
+                <i class="far fa-calendar-alt"></i>
+                <p>접수 예정</p>
+              </div>
+          </div>
+          </div>
+          <div class="lectureDesc">
+            <div class="lectureImg">
+              <img
+                src="../../static/images/lectureList/20181129114054.jpg"
+                alt=""
+              />
+            </div>
+            <div class="lectureInfo">
+              <div>
+                <p class="adult">성인강좌</p>
+                <p class="regular">정기강좌</p>
+              </div>
+              <div class="lectureContent">
+                <h3>10/25 실내 인테리어 플라원 데코 인테리어 플라원 데코</h3>
+                <p>김선우 | (월) 14:00 ~ 15:20</p>
+                <p>5,000원(총1회)</p>
+              </div>
+              
+            </div>
+            <div class="btnDiv">
+              <div class="cart">
+                <i class="fas fa-shopping-bag"></i>
+                <p>장바구니</p>
+              </div>
+              <div class="applyPossible">
+                <i class="far fa-calendar-alt"></i>
+                <p>접수 예정</p>
+              </div>
+          </div>
+          </div>
+        </div>
+        <div class="pagingDiv">
+          <!-- <c:if test="${fn:length(visitCarList) ne 0}"> -->
+							
+		<ul class="board_paging">
+		
+		
+			<!-- <c:set var="searchParam" value="&date=${ paramDate }&carNo=${paramCarNo }&applicant=${paramApplicant}" /> -->
+			<!-- 맨 처음으로 (<<) -->
+			<li><a href="${contextPath }/visitCarList?page=1${searchParam}">&lt;&lt;</a></li>
+			<!-- 이전 페이지로(<) -->
+			<li><a href="#">&lt;</a></li>
+
+			<!-- 페이지 목록 (최대 10개) -->
+			<!-- <c:forEach var="p" begin="${pi.startPage }" end="${pi.endPage }"> -->
+				<li><a href="#" class="current_page">1</a></li>
+				<li><a href="#" class="current_page">1</a></li>
+				<li><a href="#" class="current_page">1</a></li>
+				<li><a href="#" class="current_page">1</a></li>
+				<li><a href="#" class="current_page">1</a></li>
+				<li><a href="#" class="current_page">1</a></li>
+		
+
+			<!-- 다음 페이지로 (>) -->
+			<li><a href="#">&gt;</a></li>
+
+			<!-- 맨 끝으로 (>>) -->
+			<li><a
+				href="${contextPath }/visitCarList?page=${pi.maxPage}${searchParam}">&gt;&gt;</a></li>
+		</ul>
+		<!-- </c:if> -->
+          
+        </div>
+      </div>
+      <script src="../../static/js/lectureList/selectStyle.js"></script>
+      <script src="../../static/js/lectureList/lectureSearch.js"></script>
+  </body>
+</html>

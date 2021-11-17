@@ -1,0 +1,185 @@
+
+/* 나중에 header에 일괄적용 */
+.titleArea {
+    text-align: center;
+  }
+  
+  
+  :root {
+    --lecturebackground-color: #F0B95E;
+    --lightgray-color : #E4E7EB;
+    --days-color : #333333;
+    --target-color : #FFD287;
+    --category-color : #E4E7EB;
+  }
+  * {
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+
+  a {
+      text-decoration: none;
+  }
+  /* 나중에 header에 일괄 적용 */
+
+.mypagePaymentDetails {
+    display: flex;
+    flex-direction: column;
+}
+  
+
+  .mypagePaymentDetails .paymentList {
+    display: flex;
+    justify-content: center;
+}
+
+  .mypagePaymentDetails .paymentList .paymentWrap {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 900px;
+    }
+    .mypagePaymentDetails .paymentList .paymentWrap table{
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+    }
+
+  .mypagePaymentDetails .paymentList th {
+    font-size: 16px;
+    color: #222;
+    text-align: center;
+    padding: 11px 5px 10px 5px;
+    background-color: #f4f4f4;
+    height: 66px;
+    font-weight: normal;
+  }
+  .mypagePaymentDetails .paymentList thead {
+    border-top: 1px solid black;
+}
+
+  .mypagePaymentDetails .paymentList tbody td {
+   height: 150px;
+   font-size: 15px;
+    color: #666;
+    text-align: center;
+    padding: 11px 5px 10px 5px;
+    border-bottom: 0;
+  }
+
+  .mypagePaymentDetails .paymentList tbody tr:not(:first-of-type) {
+   border-top: 0.01px solid lightgray;
+   }
+
+  .mypagePaymentDetails .imgBox {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+  .mypagePaymentDetails .imgBox img {
+      width: 100%;
+      height: 100%;
+  }
+
+  .mypagePaymentDetails .classInfo p {
+      font-size: 16px;
+      color: #222;
+      line-height: 22px;
+      text-align: left;
+      margin: 0;
+    }
+    .mypagePaymentDetails .classInfo a {
+        font-size: 18px;
+        color: #222;
+    }
+    
+  .mypagePaymentDetails .classInfo {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+.mypagePaymentDetails tfoot a{
+        width: auto;
+        padding: 0 12px;
+        text-decoration: none;
+        background: #fff;
+        border: 1px solid #aaa;
+        color: #222;
+        padding: 0 10px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 13px;
+        min-width: 55px;
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+}
+
+.mypagePaymentDetails tfoot td .btnArea {
+    text-align: left;
+    overflow: hidden;
+}
+
+.mypagePaymentDetails tfoot td .total {
+    text-align: right;
+}
+
+.mypagePaymentDetails .aRight {
+    text-align: right !important;
+}
+
+.mypagePaymentDetails tfoot td .total em {
+    color: #e22a2a;
+    font-size: 22px;
+    font-family: 'Roboto';
+    font-weight: 700;
+    margin-left: 15px;
+    font-style: normal;
+}
+
+.mypagePaymentDetails tfoot td .total .selNum {
+    margin-right: 40px;
+    position: relative;
+}
+
+.mypagePaymentDetails tfoot td .total .selNum:after {
+    display: block;
+    content: "";
+    height: 14px;
+    width: 1px;
+    background: #888;
+    position: absolute;
+    top: 2px;
+    right: -20px;
+}
+
+  .mypagePaymentDetails a {
+    word-break: break-all;
+  }
+
+a:link, a:visited, a:hover, a:active, a:focus {
+    text-decoration: none;
+}
+
+  .mypagePaymentDetails .paymentList tfoot td {
+    background: #f4f4f4;
+    padding: 18px 30px 17px;
+    font-size: 14px;
+    border-top: 1px solid #e5e5e5;
+    color: #666;
+    text-align: center;
+    height: 65px;
+   }
+
+
+
+  .mypagePaymentDetails .paymentList input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+  }

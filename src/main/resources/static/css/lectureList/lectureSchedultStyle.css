@@ -1,0 +1,239 @@
+/* calendar */
+.lectureScheduleBody .calendar {
+  width: 1320px;
+  /* height: 52rem; */
+  /* box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4); */
+}
+
+.lectureScheduleBody .month {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+  padding: 0;
+  text-align: center;
+  color: white;
+  /* margin: 0; */
+  /* text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5); */
+  margin-bottom: 20px;
+}
+
+.lectureScheduleBody .calendar .month select {
+  color: white;
+}
+
+.lectureScheduleBody .month i {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.lectureScheduleBody .month h1 {
+  font-size: 55px;
+  height: 60px;
+  line-height: 60px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin: 0 15px;
+}
+
+.lectureScheduleBody .month p {
+  font-size: 36px;
+}
+.lectureScheduleBody .date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lectureScheduleBody .weekdays {
+  background-color: var(--lightgray-color);
+  color: black;
+  width: 100%;
+  height: 55px;
+  /* padding: 0 0.4rem; */
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+  border-radius: 15px 15px 0 0;
+}
+
+.lectureScheduleBody .weekdays div {
+  border-left: 1px solid white;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  width: calc(1320px / 7);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5); */
+}
+
+.lectureScheduleBody .weekdays div:nth-of-type(1) {
+  border-left: 0;
+}
+
+.lectureScheduleBody .days {
+  background-color: white;
+  color: var(--days-color);
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  border-radius: 0 0 15px 15px;
+}
+
+.lectureScheduleBody .days > div {
+  border: 0.05px solid lightgray;
+  font-size: 14px;
+  margin: 0;
+  width: calc(1320px / 7);
+  height: 130px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  /* text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5); */
+  transition: background-color 0.2s;
+  padding: 10px;
+}
+
+.lectureScheduleBody .days > div > div {
+  width: 100%;
+  display: flex;
+}
+
+.lectureScheduleBody .days > div > div.contents {
+  margin-top: 3px;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.lectureScheduleBody .days > div > div:last-of-type hr {
+  width: 100%;
+  border: 0.005px solid lightgray;
+}
+
+.lectureScheduleBody .days > div > div:last-of-type a {
+  color: gray;
+}
+
+.lectureScheduleBody .days > div > div:last-of-type a p:last-of-type {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* .lectureScheduleBody .days div:hover:not(.today) {
+    background-color: #262626;
+    border: 0.2rem solid #777;
+    cursor: pointer;
+  } */
+
+.lectureScheduleBody .prev-date,
+.lectureScheduleBody .next-date {
+  opacity: 0.5;
+  background-color: gray;
+  color: white;
+}
+
+.lectureScheduleBody .next-date:last-of-type {
+  border-radius: 0 0 15px 0;
+}
+
+.lectureScheduleBody .today {
+  background-color: var(--lecturebackground-color);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* dropdown effect */
+
+.lectureScheduleBody .yearDiv {
+  display: flex;
+  justify-content: center;
+}
+.lectureScheduleBody .yearDiv select {
+  width: 150px;
+  background-color: var(--lecturebackground-color);
+  font-size: 36px;
+  text-align: center;
+  border: 0;
+}
+
+/* hover modal */
+
+.lectureScheduleBody div.cursors > div {
+  position: absolute;
+  top: 300px;
+  left: 300px;
+  z-index: 10000;
+  pointer-events: none;
+  transform: translate(-100%, -50%);
+  align-items: center;
+}
+
+.lectureScheduleBody div.cursors div.lectureModal {
+  border-radius: 15px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 524px;
+  height: 184px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 15px;
+  color: black;
+  opacity: 0;
+  transition: opacity 0.5s;
+  display: flex;
+  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%),
+    0 0 0 1px rgb(10 10 10 / 2%);
+}
+
+.lectureScheduleBody div.cursors div.lectureModal .lectureImg img {
+  height: 100%;
+  border-radius: 15px 0 0 15px;
+}
+
+.lectureScheduleBody .lectureInfo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 12px;
+}
+
+.lectureScheduleBody div.lectureInfo div:first-of-type p {
+  display: inline-block;
+  padding: 10px;
+}
+
+.lectureScheduleBody div.lectureInfo h3 {
+  line-height: 1.2em;
+  margin-top: 10px;
+  margin-bottom: 7px;
+}
+
+.lectureScheduleBody div.lectureInfo div:last-of-type p {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  font-weight: 400;
+}
+
+.lectureScheduleBody .adult {
+  background-color: var(--lecturebackground-color);
+  color: white;
+}
+
+.lectureScheduleBody .regular {
+  color: white;
+  background-color: gray;
+}
+
+.lectureScheduleBody div.cursors div.visible {
+  opacity: 1;
+}

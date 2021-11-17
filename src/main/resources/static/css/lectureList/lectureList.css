@@ -1,0 +1,280 @@
+
+/* 나중에 header에 일괄적용 */
+.titleArea {
+  text-align: center;
+}
+
+
+:root {
+  --lecturebackground-color: #F0B95E;
+  --lightgray-color : #E4E7EB;
+  --days-color : #333333;
+  --target-color : #FFD287;
+  --category-color : #E4E7EB;
+}
+* {
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+/* 나중에 header에 일괄 적용 */
+  
+.lecturelist {
+    margin: 0;
+}
+
+.lecturelist p{
+  margin: 0;
+}
+.lecturelist a {
+  text-decoration: 0;
+}
+
+
+
+
+.lecturelist .scheduleContainer, .lecturelist .listSearchContainer {
+    width: 100%;
+    min-height : 875px;
+    background-color: var(--lecturebackground-color);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.lecturelist select {
+  /* -webkit-appearance: none; */
+  /* -moz-appearance: none; */
+  text-indent: 1px;
+  text-overflow: '';
+  /* appearance: none; */
+    border-radius:0;
+    border: 0;
+}
+
+.lecturelist select:focus {
+  outline: none;
+}
+
+.lecturelist option:hover{
+    background-color:#FFF;
+    outline:none;
+    border:none;
+    box-shadow:none;
+}
+
+/* search */
+
+.lecturelist .searchContainer {
+  width: 1320px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lecturelist .searchContainer .selectDiv {
+  width: calc((1320px - 390px - 18px)/7);
+  height: 65px;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  background-color: var(--lightgray-color);
+  display: flex;
+  align-items: center;
+}
+
+/* .lecturelist .searchContainer select {
+  width: calc((1320px - 390px - 18px)/7);
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--lightgray-color);
+} */
+
+
+
+
+.lecturelist .typingSearch{
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+}
+
+.lecturelist .typingSearch div{
+  display: flex;
+}
+.lecturelist .typingSearch a {
+  cursor: pointer;
+}
+
+.lecturelist .typingSearch button{
+  width: 20%;
+  font-size: 20px;
+  background-color: var(--lightgray-color);
+  border: 0;
+}
+.lecturelist .typingSearch input{
+  width:80%;
+  padding-left: 10px;
+  background-color: var(--lightgray-color);
+  height: 65px;
+  border: 0;
+  font-size: 18px;
+}
+
+.lecturelist .typingSearch input:focus{
+  outline: none;
+}
+
+.lecturelist .typingSearch a{
+  text-align: right;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.lecturelist .searchContainer div p{
+  color: white;
+  margin-bottom: 5px;
+}
+
+.lecturelist .searchContainer select {
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+/* select effect */
+
+
+/* ===== Select Box ===== */
+.sel {
+  font-size:18px;
+  display: inline-block;
+  /* margin: 3em 2em; */
+  /* background-color: transparent; */
+  position: relative;
+  cursor: pointer;
+}
+
+.sel::before {
+  position: absolute;
+  content: '\f063';
+  font-family: 'FontAwesome';
+  font-size: 18px;
+  color: #FFF;
+  right: 20px;
+  top: calc(50% - 0.5em);
+}
+
+.sel.active::before {
+  transform: rotateX(-180deg);
+}
+
+.sel__placeholder {
+  display: block;
+  font-family: 'Quicksand';
+  font-size: 18px;
+  color: var(--days-color);
+  padding: 0.2em 0.5em;
+  text-align: left;
+  pointer-events: none;
+  user-select: none;
+  visibility: visible;
+}
+
+.sel.active .sel__placeholder {
+  visibility: hidden;
+}
+
+.sel__placeholder::before {
+  position: absolute;
+  /* top: 0; */
+  /* bottom: 0; */
+  left: 0;
+  right: 0;
+  padding: 0 0.5em;
+  content: attr(data-placeholder);
+  visibility: hidden;
+}
+
+.sel.active .sel__placeholder::before {
+  visibility: visible;
+}
+
+.sel__box {
+  position: absolute;
+  top: calc(100% + 4px);
+  /* left: -4px; */
+  display: none;
+  list-style-type: none;
+  text-align: left;
+  font-size: 1em;
+  background-color: #FFF;
+  width: calc((1320px - 390px - 18px)/7);
+  box-sizing: border-box;
+}
+
+
+
+.sel.active .sel__box {
+  display: block;
+  animation: fadeInUp 500ms;
+}
+
+.sel__box__options {
+  display: list-item;
+  font-family: 'Quicksand';
+  font-size: 18px;
+  color: #838e95;
+  padding: 9px 18px;
+  padding-right: 0;
+  user-select: none;
+}
+
+.sel__box__options::after {
+  content: '\f00c';
+  font-family: 'FontAwesome';
+  font-size: 18px;
+  margin-left: 5px;
+  display: none;
+}
+
+.sel__box__options.selected::after {
+  display: inline;
+}
+
+.sel__box__options:hover {
+  background-color: #ebedef;
+}
+
+/* ----- Select Box Black Panther ----- */
+/* .sel {
+  border-bottom: 4px solid rgba(0, 0, 0, 0.3);
+} */
+
+.sel--black-panther {
+  z-index: 3;
+}
+/* ===== Keyframes ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}

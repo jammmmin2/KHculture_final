@@ -1,0 +1,235 @@
+
+/* 나중에 header에 일괄적용 */
+.titleArea {
+    text-align: center;
+  }
+  
+  
+  :root {
+    --lecturebackground-color: #F0B95E;
+    --lightgray-color : #E4E7EB;
+    --days-color : #333333;
+    --target-color : #FFD287;
+    --category-color : #E4E7EB;
+  }
+  * {
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+
+  a {
+      text-decoration: none;
+  }
+  /* 나중에 header에 일괄 적용 */
+
+.mypageCart {
+    display: flex;
+    flex-direction: column;
+}
+  
+.mypageCart .cartNotice {
+    width: 1320px;
+    margin: 0 auto;
+    color: gray;
+}
+
+  .mypageCart .cartList {
+    display: flex;
+    justify-content: center;
+}
+
+  .mypageCart .cartList .cartWrap {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 1320px;
+    }
+    .mypageCart .cartList .cartWrap table{
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-bottom: 1px solid black;
+    }
+
+ .mypageCart .cartList caption {
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    text-indent: -9999em;
+    overflow: hidden;
+    font-size: 0;
+  }
+
+  .mypageCart .cartList th {
+    font-size: 16px;
+    color: #222;
+    text-align: center;
+    padding: 11px 5px 10px 5px;
+    background-color: #f4f4f4;
+    height: 66px;
+    font-weight: normal;
+  }
+  .mypageCart .cartList thead {
+    border-top: 1px solid black;
+}
+
+  .mypageCart .cartList tbody td {
+   height: 150px;
+   font-size: 15px;
+    color: #666;
+    text-align: center;
+    padding: 11px 5px 10px 5px;
+    border-bottom: 0;
+  }
+
+  .mypageCart .cartList tbody tr:not(:first-of-type) {
+   border-top: 0.01px solid lightgray;
+   }
+
+  .mypageCart .imgBox {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+  .mypageCart .imgBox img {
+      width: 100%;
+      height: 100%;
+  }
+
+  .mypageCart .classInfo p {
+      font-size: 16px;
+      color: #222;
+      line-height: 22px;
+      text-align: left;
+      margin: 0;
+    }
+    .mypageCart .classInfo a {
+        font-size: 18px;
+        color: #222;
+    }
+    
+  .mypageCart .classInfo {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+.mypageCart tfoot a{
+        width: auto;
+        padding: 0 12px;
+        margin-left: 10px;
+        text-decoration: none;
+        background: #fff;
+        border: 1px solid #aaa;
+        color: #222;
+        padding: 0 10px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 13px;
+        min-width: 55px;
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+}
+
+.mypageCart tfoot td .btnArea {
+    text-align: left;
+    overflow: hidden;
+}
+
+.mypageCart tfoot td .total {
+    text-align: right;
+}
+
+.mypageCart .aRight {
+    text-align: right !important;
+}
+
+.mypageCart tfoot td .total em {
+    color: #e22a2a;
+    font-size: 22px;
+    font-family: 'Roboto';
+    font-weight: 700;
+    margin-left: 15px;
+    font-style: normal;
+}
+
+.mypageCart tfoot td .total .selNum {
+    margin-right: 40px;
+    position: relative;
+}
+
+.mypageCart tfoot td .total .selNum:after {
+    display: block;
+    content: "";
+    height: 14px;
+    width: 1px;
+    background: #888;
+    position: absolute;
+    top: 2px;
+    right: -20px;
+}
+
+  .mypageCart a {
+    word-break: break-all;
+  }
+
+/* 결제 버튼 div */
+.mypageCart .billBtnArea {
+    margin-top: 30px;
+}    
+.mypageCart > .billBtnArea a {
+    padding: 0 40px;
+}
+.mypageCart .billBtnArea > a:first-child {
+    margin-left: 0;
+}
+
+a:link, a:visited, a:hover, a:active, a:focus {
+    text-decoration: none;
+}
+
+.mypageCart .billBtnArea .btnWhite {
+    background: #fff;
+    border: 1px solid #aaa;
+    color: #222;
+}
+.mypageCart .billBtnArea .btnType03 {
+    height: 66px;
+    line-height: 66px;
+    font-size: 20px;
+    min-width: 120px;
+}
+.mypageCart .billBtnArea .btn {
+    display: inline-block;
+    padding: 0 30px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.mypageCart .billBtnArea .btnRed {
+    background: var(--lecturebackground-color);
+    color: white;
+    margin-left: 10px;
+}
+  
+  .mypageCart .cartList tfoot td {
+    background: #f4f4f4;
+    padding: 18px 30px 17px;
+    font-size: 14px;
+    border-top: 1px solid #e5e5e5;
+    color: #666;
+    text-align: center;
+    height: 86px;
+   }
+
+
+
+  .mypageCart .cartList input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+  }

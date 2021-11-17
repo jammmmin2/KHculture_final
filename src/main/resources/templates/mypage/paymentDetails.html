@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>결제내역</title>
+    <link
+      rel="stylesheet"
+      href="../../static/css/mypage/paymentDetailsStyle.css"
+    />
+    <!-- 폰트 어썸 -->
+    <script
+      src="https://kit.fontawesome.com/1be9c91961.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- noto sans 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="mypagePaymentDetails">
+    <div class="titleArea">
+        <h1>결제내역</h1>
+    </div>
+    <div class="paymentList">
+        <div class="paymentWrap">
+        <table>
+            <colgroup>
+                <col style="width: 5%;">
+                <col style="width: 15%;">
+                <col style="width: 45%;">
+                <col style="width: 15%;">
+                <col style="width: 15%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">
+                        <span class="bxCheck">
+                            <input type="checkbox">
+                        </span>
+                    </th>
+                    <th scope="col" colspan="2">강좌정보</th>
+                    <th scope="col">강사</th>
+                    <th scope="col">수강료</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                   <td> <span class="bxCheck">
+                    <input type="checkbox">
+                </span></td>
+                <td>
+                    <div class="imgBox">
+                        <img src="../../static/images/lectureList/20181129114054.jpg" alt="">
+                    </div>
+                </td>
+                <td>
+                    <div class="classInfo">
+                        <a href="#">
+                            *11/21* 예쁜 고양이 케이크
+                            </a>
+                        <p class="time">(일) 11:00 ~ 12:00</p>
+                    </div>
+                </td>
+                <td>백종수</td>
+                <td>25,000dnjs</td>
+               
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">
+                        <div class="btnArea">
+                            <a href="#" class="btn btnType04 btnWhite"><span>선택 강좌 결제 취소</span></a>
+                        </div>
+                    </td>
+                    <td colspan="3">
+                        <div class="total">
+                            <span class="selNum">주문번호<em id="selectedClass">12-34</em></span>
+                            <span class="price">총 결제금액<em id="totalAmount">0</em>원</span>
+                        </div>
+                    </td>
+                    
+                </tr>
+            </tfoot>
+        </table>
+        <table>
+            <colgroup>
+                <col style="width: 5%;">
+                <col style="width: 15%;">
+                <col style="width: 45%;">
+                <col style="width: 15%;">
+                <col style="width: 15%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">
+                        <span class="bxCheck">
+                            <input type="checkbox">
+                        </span>
+                    </th>
+                    <th scope="col" colspan="2">강좌정보</th>
+                    <th scope="col">강사</th>
+                    <th scope="col">수강료</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                   <td> <span class="bxCheck">
+                    <input type="checkbox">
+                </span></td>
+                <td>
+                    <div class="imgBox">
+                        <img src="../../static/images/lectureList/20181129114054.jpg" alt="">
+                    </div>
+                </td>
+                <td>
+                    <div class="classInfo">
+                        <a href="#">
+                            *11/21* 예쁜 고양이 케이크
+                            </a>
+                        <p class="time">(일) 11:00 ~ 12:00</p>
+                    </div>
+                </td>
+                <td>백종수</td>
+                <td>25,000dnjs</td>
+               
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">
+                        <div class="btnArea">
+                            <a href="#" class="btn btnType04 btnWhite"><span>선택 강좌 결제 취소</span></a>
+                        </div>
+                    </td>
+                    <td colspan="3">
+                        <div class="total">
+                            <span class="selNum">주문번호<em id="selectedClass">12-34</em></span>
+                            <span class="price">총 결제금액<em id="totalAmount">0</em>원</span>
+                        </div>
+                    </td>
+                    
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+<script src="../../static/js/lectureList/paymentDetailsjs.js"></script>
+  </body>
+</html>

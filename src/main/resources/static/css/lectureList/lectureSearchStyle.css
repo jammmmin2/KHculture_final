@@ -1,0 +1,113 @@
+.listSearchContainer .listDiv {
+    display: flex;
+    flex-direction: column;
+    width: 1320px;
+}
+
+.listSearchContainer .listDiv > div {
+    width: 100%;
+    display: flex;
+}
+
+.listSearchContainer .lectureDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.listSearchContainer .alignDiv {
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: white;
+}
+.listSearchContainer .alignDiv a {
+    color: white;
+    font-weight: 300;
+}
+
+.listSearchContainer .alignDiv a.line {
+    border-bottom: 2px solid white;
+    font-weight: bold;
+}
+
+.listSearchContainer .listDiv .lectureDesc {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 170px;
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 20%),
+    0 0 0 1px rgb(10 10 10 / 2%);
+    margin-bottom: 20px;
+}
+
+.listSearchContainer .listDiv .lectureDesc img{
+    height: 100%;
+}
+
+
+.listSearchContainer .lectureInfo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+  .listSearchContainer div.lectureInfo div:first-of-type p {
+    display: inline-block;
+    width: 92px;
+    height: 27px;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .listSearchContainer div.lectureInfo h3 {
+    line-height: 1.2em;
+    margin-top: 18px;
+    margin-bottom: 3px;
+  }
+  
+  .listSearchContainer div.lectureInfo div.lectureContent {
+      width: 860px;
+  }
+  .listSearchContainer div.lectureInfo div.lectureContent p {
+    font-size: 15px;
+    margin-bottom: 7px;
+    font-weight: 400;
+  }
+  
+  .listSearchContainer .adult {
+    background-color: var(--lecturebackground-color);
+    color: white;
+  }
+  
+  .listSearchContainer .regular {
+    color: white;
+    background-color: gray;
+  }
+
+  .listSearchContainer div.btnDiv {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      margin-right: 35px;
+    }
+    .listSearchContainer div.btnDiv div {
+        background-color: var(--lecturebackground-color);
+        width: 97px;
+        height: 97px;
+        border-radius: 10px;
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-weight: 400;
+        cursor: pointer;
+    }
+    .listSearchContainer div.btnDiv div i {
+        font-size: 40px;
+        margin-bottom: 5px;
+    }
+
+    .listSearchContainer div.btnDiv div:first-of-type {
+        margin-right: 15px;
+    }
